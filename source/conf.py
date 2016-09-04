@@ -185,7 +185,7 @@ html_static_path = ['_static']
 # directly to the root of the documentation.
 #
 # html_extra_path = []
-html_extra_path = ['robots.txt']
+html_extra_path = ['robots.txt', '.nojekyll']
 
 # If not None, a 'Last updated on:' timestamp is inserted at every page
 # bottom, using the given strftime format.
