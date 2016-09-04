@@ -1,0 +1,16 @@
+{% extends "sphinx_rtd_theme/layout.html" %}
+
+{% set script_files = script_files + [ "_static/mytheme.js" ] %}
+{% set css_files    = css_files    + [ "_static/mytheme.css" ] %}
+
+{%- block extrahead %}
+{{ super() }}
+<!-- my theme custom extrahead beacon -->
+{%- endblock%}
+
+{% block footer %}
+<div id="mytheme_common">
+  <p>my theme, {{ theme_myval1 }}, {{ theme_myval2 }} - {{ theme_myval3 }}</p>
+</div>
+{{ super() }}
+{% endblock %}

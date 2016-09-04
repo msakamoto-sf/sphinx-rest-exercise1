@@ -1,0 +1,21 @@
+.. vim:set expandtab tabstop=2 shiftwidth=2 softtabstop=2 autoindent smartindent ft=rst:
+.. Sphinxにより二重に処理されないよう、拡張子を.rst以外にしてます。
+
+.. _`label-citation-included`:
+
+==================================
+引用書籍一覧(ページinclude)
+==================================
+
+.. [CIT07] Book7 Title.
+  foo
+  bar
+
+.. [CIT08] Book8 Title.
+  foo
+  bar
+
+.. [CIT09] Book9 Title.
+  foo
+  bar
+

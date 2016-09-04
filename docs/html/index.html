@@ -1,0 +1,426 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Sphinxとrestの練習 &mdash; SphinxとreSTの練習です。</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/main.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/mycustom.css" type="text/css" />
+  
+    <link rel="stylesheet" href="_static/mytheme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="SphinxとreSTの練習です。" href="#"/>
+        <link rel="next" title="1. restructured text の練習" href="re-st_syntax/ex-typical1.html"/>
+
+ 
+<!-- my theme custom extrahead beacon -->
+<!-- my custom "_template/layout.html" extraheader beacon -->
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="#" class="icon icon-home"> sphinx-test1
+          
+
+          
+            
+            <img src="_static/image1.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">全体目次</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sphinxとrestの練習</a></li>
+<li class="toctree-l1"><a class="reference internal" href="re-st_syntax/ex-typical1.html">1. restructured text の練習</a></li>
+<li class="toctree-l1"><a class="reference internal" href="re-st_syntax/ex-typical1.html#include">2. 引用書籍一覧(ページinclude)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="re-st_syntax/ex-role-dirs.html">3. ロールやディレクティブの練習</a></li>
+<li class="toctree-l1"><a class="reference internal" href="re-st_syntax/ex-css-class-theme.html">4. HTMLのカスタマイズ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="re-st_syntax/ex-citation1.html">5. 引用書籍一覧(ページ分割)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">全体目次2</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="re-st_syntax/ex-typical1.html">1. restructured text の練習</a></li>
+<li class="toctree-l1"><a class="reference internal" href="re-st_syntax/ex-typical1.html#include">2. 引用書籍一覧(ページinclude)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="re-st_syntax/ex-role-dirs.html">3. ロールやディレクティブの練習</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="#">sphinx-test1</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="#">Docs</a> &raquo;</li>
+      
+    <li>Sphinxとrestの練習</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/index.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sphinxrest">
+<h1><a class="toc-backref" href="#id4">Sphinxとrestの練習</a><a class="headerlink" href="#sphinxrest" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="contents topic" id="id1">
+<p class="topic-title first">このページ内の目次
+一覧</p>
+<ul class="simple">
+<li><a class="reference internal" href="#sphinxrest" id="id4">Sphinxとrestの練習</a><ul>
+<li><a class="reference internal" href="#toctree" id="id5">toctreeをもう一つ入れてみる</a></li>
+<li><a class="reference internal" href="#todo" id="id6">TODO</a></li>
+<li><a class="reference internal" href="#id3" id="id7">インデックスなど</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p><strong>toctreeのselfには、numberedしても各見出しに番号付かないのか・・・。</strong></p>
+<div class="toctree-wrapper compound" id="mastertoc">
+<p class="caption"><span class="caption-text">全体目次</span><a class="headerlink" href="#mastertoc" title="この目次へのパーマリンク">¶</a></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sphinxとrestの練習</a></li>
+<li class="toctree-l1"><a class="reference internal" href="re-st_syntax/ex-typical1.html">1. restructured text の練習</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-typical1.html#html">1.1. 段落とHTMLエスケープ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-typical1.html#label-quote-block">1.2. 引用</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-typical1.html#label-newline-and-indent">1.2.1. 改行とインデントをそのまま表示</a></li>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-typical1.html#label-code-block">1.2.2. 書籍や参考資料の引用</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-typical1.html#id14">1.3. 脚注</a></li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-typical1.html#id20">1.4. コードブロック</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-typical1.html#label-colon-variation">1.4.1. コロンのバリエーション</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-typical1.html#label-comment-out">1.5. コメントアウト</a></li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-typical1.html#label-list-samples">1.6. リスト</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-typical1.html#label-list-without-number">1.6.1. 番号無し</a></li>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-typical1.html#label-list-with-number">1.6.2. 番号あり。</a></li>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-typical1.html#id26">1.6.3. 番号あり/なし混在</a></li>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-typical1.html#label-definition-list">1.6.4. 定義リスト</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-typical1.html#italic-bold-literal">1.7. <em>italic</em>/<strong>bold</strong>/<code class="docutils literal"><span class="pre">literal</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-typical1.html#rest">1.8. reSTマークアップのエスケープ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-typical1.html#label-table-block-notation">1.9. テーブル</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-typical1.html#id29">1.9.1. 簡単な書き方</a></li>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-typical1.html#id30">1.9.2. 凝った書き方</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-typical1.html#url">1.10. URLリンクとラベルと参照と画像</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-typical1.html#label-url-link-writing">1.10.1. URLリンクの書き方</a></li>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-typical1.html#label-link-in-page">1.10.2. 同じページ内のラベル参照</a></li>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-typical1.html#id34">1.10.3. 違うページへの参照</a></li>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-typical1.html#id35">1.10.4. 画像</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-typical1.html#id36">1.11. 置換機能による共通化・省力化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-typical1.html#id37">1.12. フィールド表記</a></li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-typical1.html#todos">1.13. TODOs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-typical1.html#id38">1.14. 引用書籍一覧(同一ページ内)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="re-st_syntax/ex-typical1.html#include">2. 引用書籍一覧(ページinclude)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="re-st_syntax/ex-role-dirs.html">3. ロールやディレクティブの練習</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-role-dirs.html#id2">3.1. ロール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-role-dirs.html#numfig-numref">3.2. 図表番号(numfig/numref)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-role-dirs.html#id3">3.3. ディレクティブ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-role-dirs.html#html">3.3.1. HTML定義</a></li>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-role-dirs.html#id4">3.3.2. HTMLベタ書き</a></li>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-role-dirs.html#id5">3.3.3. 置換機能を使ったHTMLベタ書きのライブラリ化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-role-dirs.html#envvar">3.3.4. 環境変数(envvar)ディレクティブ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-role-dirs.html#include-literalinclude">3.3.5. include, literalinclude ディレクティブ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-role-dirs.html#admonitions">3.3.6. Admonitions ディレティブ</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-role-dirs.html#todos">3.4. TODOs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-role-dirs.html#id6">3.5. 章節番号の設定</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="re-st_syntax/ex-css-class-theme.html">4. HTMLのカスタマイズ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-css-class-theme.html#id1">4.1. テーマに触らないカスタマイズ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-css-class-theme.html#css-js">4.1.1. 静的CSS/JSのカスタマイズ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-css-class-theme.html#layout-html">4.1.2. layout.htmlのカスタマイズ</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-css-class-theme.html#id2">4.2. テーマのカスタマイズ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-css-class-theme.html#mytheme1">4.2.1. mytheme1 テーマのファイル内容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-css-class-theme.html#mytheme1-css">4.2.2. mytheme1 のCSSクラスを使ってみる</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="re-st_syntax/ex-citation1.html">5. 引用書籍一覧(ページ分割)</a></li>
+</ul>
+</div>
+<div class="section" id="toctree">
+<h2><a class="toc-backref" href="#id5">toctreeをもう一つ入れてみる</a><a class="headerlink" href="#toctree" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="toctree-wrapper compound" id="id2">
+<p class="caption"><span class="caption-text">全体目次2</span><a class="headerlink" href="#id2" title="この目次へのパーマリンク">¶</a></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="re-st_syntax/ex-typical1.html">1. restructured text の練習</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-typical1.html#html">1.1. 段落とHTMLエスケープ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-typical1.html#label-quote-block">1.2. 引用</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-typical1.html#label-newline-and-indent">1.2.1. 改行とインデントをそのまま表示</a></li>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-typical1.html#label-code-block">1.2.2. 書籍や参考資料の引用</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-typical1.html#id14">1.3. 脚注</a></li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-typical1.html#id20">1.4. コードブロック</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-typical1.html#label-colon-variation">1.4.1. コロンのバリエーション</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-typical1.html#label-comment-out">1.5. コメントアウト</a></li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-typical1.html#label-list-samples">1.6. リスト</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-typical1.html#label-list-without-number">1.6.1. 番号無し</a></li>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-typical1.html#label-list-with-number">1.6.2. 番号あり。</a></li>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-typical1.html#id26">1.6.3. 番号あり/なし混在</a></li>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-typical1.html#label-definition-list">1.6.4. 定義リスト</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-typical1.html#italic-bold-literal">1.7. <em>italic</em>/<strong>bold</strong>/<code class="docutils literal"><span class="pre">literal</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-typical1.html#rest">1.8. reSTマークアップのエスケープ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-typical1.html#label-table-block-notation">1.9. テーブル</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-typical1.html#id29">1.9.1. 簡単な書き方</a></li>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-typical1.html#id30">1.9.2. 凝った書き方</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-typical1.html#url">1.10. URLリンクとラベルと参照と画像</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-typical1.html#label-url-link-writing">1.10.1. URLリンクの書き方</a></li>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-typical1.html#label-link-in-page">1.10.2. 同じページ内のラベル参照</a></li>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-typical1.html#id34">1.10.3. 違うページへの参照</a></li>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-typical1.html#id35">1.10.4. 画像</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-typical1.html#id36">1.11. 置換機能による共通化・省力化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-typical1.html#id37">1.12. フィールド表記</a></li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-typical1.html#todos">1.13. TODOs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-typical1.html#id38">1.14. 引用書籍一覧(同一ページ内)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="re-st_syntax/ex-typical1.html#include">2. 引用書籍一覧(ページinclude)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="re-st_syntax/ex-role-dirs.html">3. ロールやディレクティブの練習</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-role-dirs.html#id2">3.1. ロール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-role-dirs.html#numfig-numref">3.2. 図表番号(numfig/numref)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-role-dirs.html#id3">3.3. ディレクティブ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-role-dirs.html#html">3.3.1. HTML定義</a></li>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-role-dirs.html#id4">3.3.2. HTMLベタ書き</a></li>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-role-dirs.html#id5">3.3.3. 置換機能を使ったHTMLベタ書きのライブラリ化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-role-dirs.html#envvar">3.3.4. 環境変数(envvar)ディレクティブ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-role-dirs.html#include-literalinclude">3.3.5. include, literalinclude ディレクティブ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="re-st_syntax/ex-role-dirs.html#admonitions">3.3.6. Admonitions ディレティブ</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-role-dirs.html#todos">3.4. TODOs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="re-st_syntax/ex-role-dirs.html#id6">3.5. 章節番号の設定</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="todo">
+<h2><a class="toc-backref" href="#id6">TODO</a><a class="headerlink" href="#todo" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="admonition-todo admonition">
+<p class="first admonition-title">課題</p>
+<p class="last">TODO文書その3</p>
+</div>
+<p class="todo-source">(<a class="reference internal" href="re-st_syntax/ex-role-dirs.html#index-5"><em>元のエントリ</em></a> は、 /home/msakamoto/github/msakamoto-sf/sphinx-rest-exercise1/source/re-st_syntax/ex-role-dirs.rst の 411 行目です)</p>
+<div class="admonition-todo admonition">
+<p class="first admonition-title">課題</p>
+<p>TODO文書その4
+TODO文書その4</p>
+<p class="last">TODO文書その4
+TODO文書その4</p>
+</div>
+<p class="todo-source">(<a class="reference internal" href="re-st_syntax/ex-role-dirs.html#index-6"><em>元のエントリ</em></a> は、 /home/msakamoto/github/msakamoto-sf/sphinx-rest-exercise1/source/re-st_syntax/ex-role-dirs.rst の 413 行目です)</p>
+<div class="admonition-todo admonition">
+<p class="first admonition-title">課題</p>
+<p class="last">TODO文書その1</p>
+</div>
+<p class="todo-source">(<a class="reference internal" href="re-st_syntax/ex-typical1.html#index-0"><em>元のエントリ</em></a> は、 /home/msakamoto/github/msakamoto-sf/sphinx-rest-exercise1/source/re-st_syntax/ex-typical1.rst の 773 行目です)</p>
+<div class="admonition-todo admonition">
+<p class="first admonition-title">課題</p>
+<p>TODO文書その2
+TODO文書その2</p>
+<p class="last">TODO文書その2
+TODO文書その2</p>
+</div>
+<p class="todo-source">(<a class="reference internal" href="re-st_syntax/ex-typical1.html#index-1"><em>元のエントリ</em></a> は、 /home/msakamoto/github/msakamoto-sf/sphinx-rest-exercise1/source/re-st_syntax/ex-typical1.rst の 775 行目です)</p>
+</div>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id7">インデックスなど</a><a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">索引</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">モジュール索引</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">検索ページ</span></a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="re-st_syntax/ex-typical1.html" class="btn btn-neutral float-right" title="1. restructured text の練習" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, msaksamoto-sf.
+      最終更新: 2016-09-04 20:34:33
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/mycustom.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="_static/mytheme.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+<!-- my custom "_template/layout.html" footer beacon -->
+
+<div id="mytheme_common">
+  <p>my theme, hello, WORLD - good evening</p>
+</div>
+ 
+
+
+
+</body>
+</html>

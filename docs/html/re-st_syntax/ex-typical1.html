@@ -1,0 +1,1338 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. restructured text の練習 &mdash; SphinxとreSTの練習です。</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/main.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/mycustom.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/mytheme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="SphinxとreSTの練習です。" href="../index.html"/>
+        <link rel="next" title="3. ロールやディレクティブの練習" href="ex-role-dirs.html"/>
+        <link rel="prev" title="Sphinxとrestの練習" href="../index.html"/>
+
+ 
+<!-- my theme custom extrahead beacon -->
+<!-- my custom "_template/layout.html" extraheader beacon -->
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> sphinx-test1
+          
+
+          
+            
+            <img src="../_static/image1.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">全体目次</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Sphinxとrestの練習</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. restructured text の練習</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#html">1.1. 段落とHTMLエスケープ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#label-quote-block">1.2. 引用</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#label-newline-and-indent">1.2.1. 改行とインデントをそのまま表示</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#label-code-block">1.2.2. 書籍や参考資料の引用</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">1.3. 脚注</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id20">1.4. コードブロック</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#label-colon-variation">1.4.1. コロンのバリエーション</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#label-comment-out">1.5. コメントアウト</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#label-list-samples">1.6. リスト</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#label-list-without-number">1.6.1. 番号無し</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#label-list-with-number">1.6.2. 番号あり。</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id26">1.6.3. 番号あり/なし混在</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#label-definition-list">1.6.4. 定義リスト</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#italic-bold-literal">1.7. <em>italic</em>/<strong>bold</strong>/<code class="docutils literal"><span class="pre">literal</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rest">1.8. reSTマークアップのエスケープ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#label-table-block-notation">1.9. テーブル</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id29">1.9.1. 簡単な書き方</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id30">1.9.2. 凝った書き方</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#url">1.10. URLリンクとラベルと参照と画像</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#label-url-link-writing">1.10.1. URLリンクの書き方</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#label-link-in-page">1.10.2. 同じページ内のラベル参照</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#label-sample">1.10.2.1. ページ内リンクのテスト見出し</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id34">1.10.3. 違うページへの参照</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id35">1.10.4. 画像</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id36">1.11. 置換機能による共通化・省力化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id37">1.12. フィールド表記</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#todos">1.13. TODOs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id38">1.14. 引用書籍一覧(同一ページ内)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#include">2. 引用書籍一覧(ページinclude)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ex-role-dirs.html">3. ロールやディレクティブの練習</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ex-css-class-theme.html">4. HTMLのカスタマイズ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ex-citation1.html">5. 引用書籍一覧(ページ分割)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">全体目次2</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. restructured text の練習</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#html">1.1. 段落とHTMLエスケープ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#label-quote-block">1.2. 引用</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#label-newline-and-indent">1.2.1. 改行とインデントをそのまま表示</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#label-code-block">1.2.2. 書籍や参考資料の引用</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">1.3. 脚注</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id20">1.4. コードブロック</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#label-colon-variation">1.4.1. コロンのバリエーション</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#label-comment-out">1.5. コメントアウト</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#label-list-samples">1.6. リスト</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#label-list-without-number">1.6.1. 番号無し</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#label-list-with-number">1.6.2. 番号あり。</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id26">1.6.3. 番号あり/なし混在</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#label-definition-list">1.6.4. 定義リスト</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#italic-bold-literal">1.7. <em>italic</em>/<strong>bold</strong>/<code class="docutils literal"><span class="pre">literal</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rest">1.8. reSTマークアップのエスケープ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#label-table-block-notation">1.9. テーブル</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id29">1.9.1. 簡単な書き方</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id30">1.9.2. 凝った書き方</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#url">1.10. URLリンクとラベルと参照と画像</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#label-url-link-writing">1.10.1. URLリンクの書き方</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#label-link-in-page">1.10.2. 同じページ内のラベル参照</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#label-sample">1.10.2.1. ページ内リンクのテスト見出し</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id34">1.10.3. 違うページへの参照</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id35">1.10.4. 画像</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id36">1.11. 置換機能による共通化・省力化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id37">1.12. フィールド表記</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#todos">1.13. TODOs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id38">1.14. 引用書籍一覧(同一ページ内)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#include">2. 引用書籍一覧(ページinclude)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ex-role-dirs.html">3. ロールやディレクティブの練習</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">sphinx-test1</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>1. restructured text の練習</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/re-st_syntax/ex-typical1.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="restructured-text">
+<h1><a class="toc-backref" href="#id47">1. restructured text の練習</a><a class="headerlink" href="#restructured-text" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="contents topic" id="id1">
+<p class="topic-title first">このページ内の目次
+一覧</p>
+<ul class="simple">
+<li><a class="reference internal" href="#restructured-text" id="id47">restructured text の練習</a><ul>
+<li><a class="reference internal" href="#html" id="id48">段落とHTMLエスケープ</a></li>
+<li><a class="reference internal" href="#label-quote-block" id="id49">引用</a><ul>
+<li><a class="reference internal" href="#label-newline-and-indent" id="id50">改行とインデントをそのまま表示</a></li>
+<li><a class="reference internal" href="#label-code-block" id="id51">書籍や参考資料の引用</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id14" id="id52">脚注</a></li>
+<li><a class="reference internal" href="#id20" id="id53">コードブロック</a><ul>
+<li><a class="reference internal" href="#label-colon-variation" id="id54">コロンのバリエーション</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#label-comment-out" id="id55">コメントアウト</a></li>
+<li><a class="reference internal" href="#label-list-samples" id="id56">リスト</a><ul>
+<li><a class="reference internal" href="#label-list-without-number" id="id57">番号無し</a></li>
+<li><a class="reference internal" href="#label-list-with-number" id="id58">番号あり。</a></li>
+<li><a class="reference internal" href="#id26" id="id59">番号あり/なし混在</a></li>
+<li><a class="reference internal" href="#label-definition-list" id="id60">定義リスト</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#italic-bold-literal" id="id61"><em>italic</em>/<strong>bold</strong>/<code class="docutils literal"><span class="pre">literal</span></code></a></li>
+<li><a class="reference internal" href="#rest" id="id62">reSTマークアップのエスケープ</a></li>
+<li><a class="reference internal" href="#label-table-block-notation" id="id63">テーブル</a><ul>
+<li><a class="reference internal" href="#id29" id="id64">簡単な書き方</a></li>
+<li><a class="reference internal" href="#id30" id="id65">凝った書き方</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#url" id="id66">URLリンクとラベルと参照と画像</a><ul>
+<li><a class="reference internal" href="#label-url-link-writing" id="id67">URLリンクの書き方</a></li>
+<li><a class="reference internal" href="#label-link-in-page" id="id68">同じページ内のラベル参照</a><ul>
+<li><a class="reference internal" href="#label-sample" id="id69">ページ内リンクのテスト見出し</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id34" id="id70">違うページへの参照</a></li>
+<li><a class="reference internal" href="#id35" id="id71">画像</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id36" id="id72">置換機能による共通化・省力化</a></li>
+<li><a class="reference internal" href="#id37" id="id73">フィールド表記</a></li>
+<li><a class="reference internal" href="#todos" id="id74">TODOs</a></li>
+<li><a class="reference internal" href="#id38" id="id75">引用書籍一覧(同一ページ内)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#include" id="id76">引用書籍一覧(ページinclude)</a></li>
+</ul>
+</div>
+<div class="section" id="html">
+<h2><a class="toc-backref" href="#id48">1.1. 段落とHTMLエスケープ</a><a class="headerlink" href="#html" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>&lt;s&gt;&#8221;こんにちは改行&#8217;&amp;&lt;/s&gt;
+&lt;s&gt;&#8221;こんにちは改行&#8217;&amp;&lt;/s&gt;
+&lt;s&gt;&#8221;こんにちは改行&#8217;&amp;&lt;/s&gt;</p>
+<hr class="docutils" />
+<p>こんにちは改行
+こんにちは改行
+こんにちは改行</p>
+<hr class="docutils" />
+</div>
+<div class="section" id="label-quote-block">
+<span id="id2"></span><h2><a class="toc-backref" href="#id49">1.2. 引用</a><a class="headerlink" href="#label-quote-block" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>これは実は、定義リストになってしまう。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">こんにちは改行</span>
+  <span class="p">(</span><span class="n">indent</span><span class="p">)</span><span class="n">こんにちは改行引用a</span>
+    <span class="p">(</span><span class="n">indent</span><span class="p">)</span><span class="n">こんにちは改行引用b</span>
+      <span class="p">(</span><span class="n">indent</span><span class="p">)</span><span class="n">こんにちは改行引用c</span>
+    <span class="p">(</span><span class="n">indent</span><span class="p">)</span><span class="n">こんにちは改行引用b</span>
+</pre></div>
+</div>
+<p>引用をするなら、行を開けてからインデント。</p>
+<p>こんにちは改行</p>
+<blockquote>
+<div><p>(indent)こんにちは改行引用a
+(indent)こんにちは改行引用b</p>
+<blockquote>
+<div><p>(indent)こんにちは改行引用c
+(indent)こんにちは改行引用d</p>
+<blockquote>
+<div>(indent)こんにちは改行引用c
+(indent)こんにちは改行引用e</div></blockquote>
+<p>(indent)こんにちは改行引用f
+(indent)こんにちは改行引用g</p>
+</div></blockquote>
+<p>(indent)こんにちは改行引用h
+(indent)こんにちは改行引用i</p>
+</div></blockquote>
+<div class="section" id="label-newline-and-indent">
+<span id="id3"></span><h3><a class="toc-backref" href="#id50">1.2.1. 改行とインデントをそのまま表示</a><a class="headerlink" href="#label-newline-and-indent" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">改行とインデントを</div>
+<div class="line-block">
+<div class="line">そのまま表示</div>
+<div class="line-block">
+<div class="line">しますん。</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="label-code-block">
+<span id="id4"></span><h3><a class="toc-backref" href="#id51">1.2.2. 書籍や参考資料の引用</a><a class="headerlink" href="#label-code-block" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li>書籍A <a class="reference internal" href="#cit01" id="id5">[CIT01]</a> のxxxP参照</li>
+<li>書籍B <a class="reference internal" href="#cit02" id="id6">[CIT02]</a> のxxxP参照</li>
+<li>書籍C <a class="reference internal" href="#cit03" id="id7">[CIT03]</a> のxxxP参照</li>
+<li>書籍D <a class="reference internal" href="ex-citation1.html#cit04" id="id8">[CIT04]</a> のxxxP参照</li>
+<li>書籍E <a class="reference internal" href="ex-citation1.html#cit05" id="id9">[CIT05]</a> のxxxP参照</li>
+<li>書籍F <a class="reference internal" href="ex-citation1.html#cit06" id="id10">[CIT06]</a> のxxxP参照</li>
+<li>書籍G <a class="reference internal" href="#cit07" id="id11">[CIT07]</a> のxxxP参照</li>
+<li>書籍H <a class="reference internal" href="#cit08" id="id12">[CIT08]</a> のxxxP参照</li>
+<li>書籍I <a class="reference internal" href="#cit09" id="id13">[CIT09]</a> のxxxP参照</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id14">
+<h2><a class="toc-backref" href="#id52">1.3. 脚注</a><a class="headerlink" href="#id14" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>脚注を作成するためのマークアップは、<code class="docutils literal"><span class="pre">[#]_</span></code> で自動採番 <a class="footnote-reference" href="#id39" id="id15">[1]</a> することができます。 <a class="footnote-reference" href="#id40" id="id16">[2]</a></p>
+<p>もちろん手動採番 <a class="footnote-reference" href="#id41" id="id17">[3]</a> することも可能 <a class="footnote-reference" href="#id43" id="id18">[5]</a> ですが、ちょっとややこしくなりそうですね。</p>
+<p>脚注を番号ではなくラベル <a class="footnote-reference" href="#footnote-label1" id="id19">[6]</a> で作ることもできます。大きめの文書ならこっちが良いですね。</p>
+</div>
+<div class="section" id="id20">
+<h2><a class="toc-backref" href="#id53">1.4. コードブロック</a><a class="headerlink" href="#id20" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>コードブロック:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ほげ</span><span class="p">::</span>
+
+  <span class="n">コードブロック</span>
+
+<span class="n">ぼへ</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><code class="docutils literal"><span class="pre">code-block</span></code> ディレクティブ:</p>
+<p>ハイライトバリエーション : <a class="reference external" href="http://pygments.org/docs/lexers/">http://pygments.org/docs/lexers/</a></p>
+<div class="highlight-none"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span>$ cd /etc
+$ sudo yum update
+$ sudo systemctl start httpd
+</pre></div>
+</td></tr></table></div>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="n">staic</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Hello, Java&quot;</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</td></tr></table></div>
+<div class="highlight-c"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello, C</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<div class="literal-block-wrapper container" id="hello-py">
+<div class="code-block-caption"><span class="caption-number">ソースコード番号 - 1.4.1 </span><span class="caption-text">this.py</span><a class="headerlink" href="#hello-py" title="このコードへのパーマリンク">¶</a></div>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">some_function</span><span class="p">():</span>
+  <span class="n">interesting</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="hll">  <span class="k">print</span> <span class="s1">&#39;This line is highlighted.&#39;</span>
+</span>  <span class="k">print</span> <span class="s1">&#39;This one is not...&#39;</span>
+<span class="hll">  <span class="k">print</span> <span class="s1">&#39;...but this one is.&#39;</span>
+</span></pre></div>
+</td></tr></table></div>
+</div>
+<div class="highlight-php"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Content-Type: text/html&#39;</span><span class="p">);</span>
+<span class="nb">phpinfo</span><span class="p">();</span>
+</pre></div>
+</td></tr></table></div>
+<div class="highlight-sql"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">testdb1</span><span class="p">;</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">tb1</span> <span class="p">(</span>
+  <span class="n">id</span> <span class="nb">integer</span> <span class="k">primary</span> <span class="k">key</span> <span class="n">auto_increment</span><span class="p">,</span>
+  <span class="n">name</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span><span class="p">,</span>
+  <span class="n">age</span> <span class="nb">integer</span>
+  <span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">tb1</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">&#39;jon&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;job&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;bob&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">);</span>
+<span class="k">SELECT</span> <span class="n">id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span> <span class="k">FROM</span> <span class="n">tb1</span> <span class="k">WHERE</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">10</span> <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">id</span> <span class="k">DESC</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+<div class="section" id="label-colon-variation">
+<span id="id21"></span><h3><a class="toc-backref" href="#id54">1.4.1. コロンのバリエーション</a><a class="headerlink" href="#label-colon-variation" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>普通にコロン:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">code</span> <span class="n">block1</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>コロン1こだけ。:</p>
+<blockquote>
+<div>code block2</div></blockquote>
+<hr class="docutils" />
+<p>ソースコード上はいきなりコロンはできない。(Unexpected indentation.):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ほげ</span>
+<span class="p">::</span>
+
+  <span class="n">code</span> <span class="n">block3</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>段落最初がいきなりコロン（これがリテラルブロックの標準）</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">code</span> <span class="n">block</span> <span class="mi">4</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>コロンの前に空白</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">code</span> <span class="n">block</span> <span class="mi">5</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>段落最初が空白 + コロン（これがベストか。）</p>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">code</span> <span class="n">block</span> <span class="mi">6</span>
+</pre></div>
+</div>
+</div></blockquote>
+<hr class="docutils" />
+<p>もしかしてインデント要らなくね？</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>もしかしてインデント要らなくね？
+
+ ::
+
+code block 7
+</pre></div>
+</div>
+<p>→駄目だった・・・。(<code class="docutils literal"><span class="pre">Literal</span> <span class="pre">block</span> <span class="pre">expected;</span> <span class="pre">none</span> <span class="pre">found.</span></code>)</p>
+</div>
+</div>
+<div class="section" id="label-comment-out">
+<span id="id22"></span><h2><a class="toc-backref" href="#id55">1.5. コメントアウト</a><a class="headerlink" href="#label-comment-out" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>行単位:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">comment</span><span class="o">-</span><span class="n">outed1</span>
+<span class="o">..</span> <span class="n">comment</span><span class="o">-</span><span class="n">outed2</span>
+<span class="o">..</span> <span class="n">comment</span><span class="o">-</span><span class="n">outed3</span>
+</pre></div>
+</div>
+<p>複数行ならインデントしてまとめられる:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">..</span>
+  <span class="n">blocked</span> <span class="n">comment</span><span class="o">-</span><span class="n">outed1</span>
+  <span class="n">blocked</span> <span class="n">comment</span><span class="o">-</span><span class="n">outed2</span>
+  <span class="n">blocked</span> <span class="n">comment</span><span class="o">-</span><span class="n">outed3</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="label-list-samples">
+<span id="id23"></span><h2><a class="toc-backref" href="#id56">1.6. リスト</a><a class="headerlink" href="#label-list-samples" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="label-list-without-number">
+<span id="id24"></span><h3><a class="toc-backref" href="#id57">1.6.1. 番号無し</a><a class="headerlink" href="#label-list-without-number" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul>
+<li><p class="first">item1</p>
+<ul>
+<li><p class="first">item1-1
+foo
+bar
+baz</p>
+<ul>
+<li><p class="first">item1-1-1</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">code</span> <span class="n">block</span> <span class="n">AAAA</span>
+<span class="n">code</span> <span class="n">block</span> <span class="n">BBB</span>
+<span class="n">code</span> <span class="n">block</span> <span class="n">BBB</span>
+<span class="n">code</span> <span class="n">block</span> <span class="n">BBB</span>
+</pre></div>
+</div>
+<ul>
+<li><p class="first">item1-1-1-1
+FOO</p>
+<blockquote>
+<div><p>BAR</p>
+<blockquote>
+<div><p>BAZ</p>
+</div></blockquote>
+</div></blockquote>
+<ul>
+<li><p class="first">item1-1-1-1-1</p>
+<div class="line-block">
+<div class="line">改行とインデントを</div>
+<div class="line-block">
+<div class="line">そのまま表示</div>
+<div class="line-block">
+<div class="line">しますん。</div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li>item1-1-1-1-1-1</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p class="first">item1-2</p>
+<div class="literal-block-wrapper container" id="hello2-py">
+<div class="code-block-caption"><span class="caption-number">ソースコード番号 - 1.6.1 </span><span class="caption-text">this.py</span><a class="headerlink" href="#hello2-py" title="このコードへのパーマリンク">¶</a></div>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">some_function</span><span class="p">():</span>
+  <span class="n">interesting</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="hll">  <span class="k">print</span> <span class="s1">&#39;This line is highlighted.&#39;</span>
+</span>  <span class="k">print</span> <span class="s1">&#39;This one is not...&#39;</span>
+<span class="hll">  <span class="k">print</span> <span class="s1">&#39;...but this one is.&#39;</span>
+</span></pre></div>
+</div>
+</div>
+</li>
+<li><p class="first">item1-3</p>
+</li>
+</ul>
+</li>
+<li><p class="first">item 2</p>
+</li>
+</ul>
+<p>複数種類のbullet listsを連続させることはできない。:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">item1</span>
+<span class="o">+</span> <span class="n">item2</span>
+<span class="o">-</span> <span class="n">item3</span>
+</pre></div>
+</div>
+<p>→ <code class="docutils literal"><span class="pre">WARNING:</span> <span class="pre">Bullet</span> <span class="pre">list</span> <span class="pre">ends</span> <span class="pre">without</span> <span class="pre">a</span> <span class="pre">blank</span> <span class="pre">line;</span> <span class="pre">unexpected</span> <span class="pre">unindent.</span></code></p>
+<ul class="simple">
+<li>item 3a<ul>
+<li>item3a-1<ul>
+<li>item3a-1-1</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>item 3b</li>
+</ul>
+<ul class="simple">
+<li>item 4a
+ネストで、別の種類のbullet listsを混ぜる事はできる。</li>
+<li>item 4b</li>
+</ul>
+</div>
+<div class="section" id="label-list-with-number">
+<span id="id25"></span><h3><a class="toc-backref" href="#id58">1.6.2. 番号あり。</a><a class="headerlink" href="#label-list-with-number" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">ordered-1</p>
+<ol class="arabic simple">
+<li>ordered-1a</li>
+</ol>
+<blockquote>
+<div><ol class="arabic simple">
+<li>ordered-1aa</li>
+</ol>
+<blockquote>
+<div><ol class="arabic simple">
+<li>ordered-1aaa</li>
+</ol>
+</div></blockquote>
+<ol class="arabic simple">
+<li>ordered-1ab</li>
+<li>ordered-1ac</li>
+</ol>
+</div></blockquote>
+<ol class="arabic simple">
+<li>ordered-1b</li>
+<li>ordered-1c</li>
+</ol>
+</li>
+<li><p class="first">ordered-2</p>
+</li>
+<li><p class="first">ordered-3</p>
+</li>
+</ol>
+<hr class="docutils" />
+<p>OK:</p>
+<ol class="arabic">
+<li><p class="first">ordered-1</p>
+<ol class="arabic simple">
+<li>ordered-1a</li>
+</ol>
+<blockquote>
+<div><ol class="arabic simple">
+<li>ordered-1aa</li>
+</ol>
+<blockquote>
+<div><ol class="arabic simple">
+<li>ordered-1aaa</li>
+</ol>
+</div></blockquote>
+<ol class="arabic simple">
+<li>ordered-1ab</li>
+<li>ordered-1ac</li>
+</ol>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li>ordered-1b</li>
+<li>ordered-1c</li>
+</ol>
+</li>
+<li><p class="first">ordered-2</p>
+</li>
+<li><p class="first">ordered-3</p>
+</li>
+</ol>
+<p>NG:</p>
+<ol class="arabic">
+<li><p class="first">ordered-1</p>
+<p>1-1. ordered-1a</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>ordered-1aa</li>
+</ol>
+<blockquote>
+<div><ol class="arabic simple">
+<li>ordered-1aaa</li>
+</ol>
+</div></blockquote>
+<ol class="arabic simple">
+<li>ordered-1ab</li>
+<li>ordered-1ac</li>
+</ol>
+</div></blockquote>
+<p>1-2. ordered-1b
+1-3. ordered-1c</p>
+</li>
+</ol>
+<p>1. ordered-2
+1. ordered-3</p>
+</div>
+<div class="section" id="id26">
+<h3><a class="toc-backref" href="#id59">1.6.3. 番号あり/なし混在</a><a class="headerlink" href="#id26" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul>
+<li><p class="first">item1</p>
+<ol class="arabic simple">
+<li>item1a</li>
+<li>item1b</li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p class="first">item1b-1</p>
+</li>
+<li><p class="first">item1b-2</p>
+<ol class="arabic">
+<li><p class="first">item1b-2a</p>
+</li>
+<li><p class="first">item1b-2a</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">code</span><span class="o">-</span><span class="n">blockAAA</span>
+
+  <span class="n">code</span><span class="o">-</span><span class="n">blockBBB</span>
+
+<span class="n">code</span><span class="o">-</span><span class="n">blockCCC</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">item1b-2a</p>
+</li>
+</ol>
+</li>
+<li><p class="first">item1b-3</p>
+</li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple">
+<li>item1b</li>
+</ol>
+</li>
+<li><p class="first">item2</p>
+</li>
+</ul>
+</div>
+<div class="section" id="label-definition-list">
+<span id="id27"></span><h3><a class="toc-backref" href="#id60">1.6.4. 定義リスト</a><a class="headerlink" href="#label-definition-list" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="docutils">
+<dt>term1</dt>
+<dd><p class="first">description
+description</p>
+<p>description</p>
+<div class="literal-block-wrapper container" id="hello3-py">
+<div class="code-block-caption"><span class="caption-number">ソースコード番号 - 1.6.2 </span><span class="caption-text">this.py</span><a class="headerlink" href="#hello3-py" title="このコードへのパーマリンク">¶</a></div>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">some_function</span><span class="p">():</span>
+  <span class="n">interesting</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="hll">  <span class="k">print</span> <span class="s1">&#39;This line is highlighted.&#39;</span>
+</span>  <span class="k">print</span> <span class="s1">&#39;This one is not...&#39;</span>
+<span class="hll">  <span class="k">print</span> <span class="s1">&#39;...but this one is.&#39;</span>
+</span></pre></div>
+</div>
+</div>
+<p class="last">description</p>
+</dd>
+<dt>term2</dt>
+<dd><p class="first">description
+description</p>
+<ul class="simple">
+<li>item1</li>
+<li>item2<ul>
+<li>item2a</li>
+<li>item2b</li>
+</ul>
+</li>
+<li>item3</li>
+</ul>
+<p>description</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">codeblock</span> <span class="n">AAA</span>
+<span class="n">codeblock</span> <span class="n">BBB</span>
+<span class="n">codeblock</span> <span class="n">CCC</span>
+</pre></div>
+</div>
+<p class="last">description</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="italic-bold-literal">
+<span id="label-inline-format"></span><h2><a class="toc-backref" href="#id61">1.7. <em>italic</em>/<strong>bold</strong>/<code class="docutils literal"><span class="pre">literal</span></code></a><a class="headerlink" href="#italic-bold-literal" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><em>強調(italic)</em>/<strong>強い強調(bold)</strong>/<code class="docutils literal"><span class="pre">リテラル表記</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>* *強調(italic)*
+* **強い強調(bold)**
+* ``リテラル表記``
+</pre></div>
+</div>
+<p>→</p>
+<ul class="simple">
+<li><em>強調(italic)</em></li>
+<li><strong>強い強調(bold)</strong></li>
+<li><code class="docutils literal"><span class="pre">リテラル表記</span></code></li>
+</ul>
+</div>
+<div class="section" id="rest">
+<span id="label-escape-rest-markup"></span><h2><a class="toc-backref" href="#id62">1.8. reSTマークアップのエスケープ</a><a class="headerlink" href="#rest" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>* あああ *, ** ううう **, `えええ`, ``おおお``</p>
+<p>.. かかか :ABCDEF:`abcdef`</p>
+<p>= aaa</p>
+<p># bbb</p>
+<p>- ccc</p>
+<p>+ ddd</p>
+</div>
+<div class="section" id="label-table-block-notation">
+<span id="id28"></span><h2><a class="toc-backref" href="#id63">1.9. テーブル</a><a class="headerlink" href="#label-table-block-notation" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id29">
+<h3><a class="toc-backref" href="#id64">1.9.1. 簡単な書き方</a><a class="headerlink" href="#id29" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="45%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">col1</th>
+<th class="head">col2</th>
+<th class="head">col3</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>val1</td>
+<td>val2</td>
+<td>val3</td>
+</tr>
+<tr class="row-odd"><td>val1</td>
+<td>val2</td>
+<td>val3</td>
+</tr>
+<tr class="row-even"><td>val1</td>
+<td>val2</td>
+<td>val3</td>
+</tr>
+<tr class="row-odd"><td>val1</td>
+<td>val2</td>
+<td>val3</td>
+</tr>
+<tr class="row-even"><td>val1</td>
+<td>val2</td>
+<td>val3</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="31%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">Inputs</th>
+<th class="head">Output</th>
+</tr>
+<tr class="row-even"><th class="head">A</th>
+<th class="head">B</th>
+<th class="head">A or B</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-odd"><td>False</td>
+<td>False</td>
+<td>False</td>
+</tr>
+<tr class="row-even"><td>True</td>
+<td>False</td>
+<td>True</td>
+</tr>
+<tr class="row-odd"><td>False</td>
+<td>True</td>
+<td>True</td>
+</tr>
+<tr class="row-even"><td>True</td>
+<td>True</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id30">
+<h3><a class="toc-backref" href="#id65">1.9.2. 凝った書き方</a><a class="headerlink" href="#id30" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="43%" />
+<col width="21%" />
+<col width="18%" />
+<col width="18%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Header row, column 1
+(header rows optional)</th>
+<th class="head">Header 2</th>
+<th class="head">Header 3</th>
+<th class="head">Header 4</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>body row 1, column 1</td>
+<td>column 2</td>
+<td>column 3</td>
+<td>column 4</td>
+</tr>
+<tr class="row-odd"><td>body row 2</td>
+<td colspan="3">Cells may span columns.</td>
+</tr>
+<tr class="row-even"><td>body row 3</td>
+<td rowspan="2">Cells may
+span rows.</td>
+<td colspan="2" rowspan="2"><ul class="first last simple">
+<li>Table cells</li>
+<li>contain</li>
+<li>body elements.</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td>body row 4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="url">
+<h2><a class="toc-backref" href="#id66">1.10. URLリンクとラベルと参照と画像</a><a class="headerlink" href="#url" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="label-url-link-writing">
+<span id="id31"></span><h3><a class="toc-backref" href="#id67">1.10.1. URLリンクの書き方</a><a class="headerlink" href="#label-url-link-writing" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>コード:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>* http://sphinx-doc.org/
+* `sphinx-doc &lt;http://sphinx-doc.org&gt;`_
+* Sphinx-doc_
+* `example.com site`_
+
+(...)
+
+.. _Sphinx-user: http://docs.sphinx-users.jp/
+.. _example.com site: http://www.example.com/
+</pre></div>
+</div>
+<p>→</p>
+<ul class="simple">
+<li><a class="reference external" href="http://sphinx-doc.org/">http://sphinx-doc.org/</a></li>
+<li><a class="reference external" href="http://sphinx-doc.org">sphinx-doc</a></li>
+<li><a class="reference external" href="http://docs.sphinx-users.jp/">Sphinx-user</a></li>
+<li><a class="reference external" href="http://www.example.com/">example.com site</a></li>
+</ul>
+</div>
+<div class="section" id="label-link-in-page">
+<span id="id32"></span><h3><a class="toc-backref" href="#id68">1.10.2. 同じページ内のラベル参照</a><a class="headerlink" href="#label-link-in-page" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>コード:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>.. _`label sample`:
+
+ページ内リンクのテスト見出し
+##############################
+hello
+
+ここで :ref:`label sample` を参照。
+
+ページ先頭の方にある :ref:`引用ブロックのサンプル&lt;label - quote block&gt;` を参照。
+</pre></div>
+</div>
+<p>→</p>
+<div class="section" id="label-sample">
+<span id="id33"></span><h4><a class="toc-backref" href="#id69">1.10.2.1. ページ内リンクのテスト見出し</a><a class="headerlink" href="#label-sample" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>hello</p>
+<p>ここで <a class="reference internal" href="#label-sample"><span class="std std-ref">ページ内リンクのテスト見出し</span></a> を参照。</p>
+<p>ページ先頭の方にある <a class="reference internal" href="#label-quote-block"><span class="std std-ref">引用ブロックのサンプル</span></a> を参照。</p>
+</div>
+</div>
+<div class="section" id="id34">
+<h3><a class="toc-backref" href="#id70">1.10.3. 違うページへの参照</a><a class="headerlink" href="#id34" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>reST:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>* グローバルに使える参照を使用
+
+  * :ref:`ex-role-dirs_admonitions-dir` へジャンプ。
+  * :ref:`label-citation-included` へジャンプ
+
+* グローバルに使える参照を使用(リンク文字列カスタマイズ)
+
+  * :ref:`別ページの特定ラベル&lt;ex-role-dirs_admonitions-dir&gt;` へジャンプ。
+  * :ref:`別ページの特定のラベル2 &lt;label-citation-divided&gt;` へジャンプ
+
+* ``:doc:`` ロールを使用
+
+  * :doc:`ex-role-dirs` へジャンプ
+
+* ``:doc:`` ロールを使用(リンク文字列カスタマイズ)
+
+  * :doc:`別ページ&lt;ex-role-dirs&gt;` へジャンプ
+</pre></div>
+</div>
+<p>→</p>
+<ul class="simple">
+<li>グローバルに使える参照を使用<ul>
+<li><a class="reference internal" href="ex-role-dirs.html#ex-role-dirs-admonitions-dir"><span class="std std-ref">Admonitions ディレティブ</span></a> へジャンプ。</li>
+<li><a class="reference internal" href="#label-citation-included"><span class="std std-ref">引用書籍一覧(ページinclude)</span></a> へジャンプ</li>
+</ul>
+</li>
+<li>グローバルに使える参照を使用(リンク文字列カスタマイズ)<ul>
+<li><a class="reference internal" href="ex-role-dirs.html#ex-role-dirs-admonitions-dir"><span class="std std-ref">別ページの特定ラベル</span></a> へジャンプ。</li>
+<li><a class="reference internal" href="ex-citation1.html#label-citation-divided"><span class="std std-ref">別ページの特定のラベル2</span></a> へジャンプ</li>
+</ul>
+</li>
+<li><code class="docutils literal"><span class="pre">:doc:</span></code> ロールを使用<ul>
+<li><a class="reference internal" href="ex-role-dirs.html"><span class="doc">ロールやディレクティブの練習</span></a> へジャンプ</li>
+</ul>
+</li>
+<li><code class="docutils literal"><span class="pre">:doc:</span></code> ロールを使用(リンク文字列カスタマイズ)<ul>
+<li><a class="reference internal" href="ex-role-dirs.html"><span class="doc">別ページ</span></a> へジャンプ</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id35">
+<h3><a class="toc-backref" href="#id71">1.10.4. 画像</a><a class="headerlink" href="#id35" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>画像はソースファイルからの相対パスか、トップのソースディレクトリからの絶対パスで指定する。
+sphinx-quickstartで作られた <code class="docutils literal"><span class="pre">source/_static</span></code> ディレクトリに置く必要はない。</p>
+<img alt="画像のalt属性" src="../_images/image11.png" />
+<img alt="画像のalt属性" class="align-center" src="../_images/image11.png" />
+<a class="reference external image-reference" href="http://docs.sphinx-user.jp/"><img alt="画像のalt属性" class="align-right" src="../_images/image1.png" style="width: 400.0px; height: 200.0px;" /></a>
+<hr class="docutils" />
+<div class="figure" id="id44">
+<a class="reference internal image-reference" href="../_images/image2.png"><img alt="画像のalt属性" src="../_images/image2.png" style="width: 30.0px; height: 30.0px;" /></a>
+<p class="caption"><span class="caption-number">図番号 - 1.10.1 </span><span class="caption-text">This is the caption of the figure (a simple paragraph).</span></p>
+<div class="legend">
+<p>The legend consists of all elements after the caption.  In this
+case, the legend consists of this paragraph and the following
+table:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="74%" />
+<col width="26%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Images</th>
+<th class="head">&nbsp;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img alt="../_images/image3.png" class="first last" src="../_images/image3.png" />
+</td>
+<td>Number 3.</td>
+</tr>
+<tr class="row-odd"><td><img alt="../_images/image4.png" class="first last" src="../_images/image4.png" />
+</td>
+<td>Number 4.</td>
+</tr>
+<tr class="row-even"><td><img alt="../_images/image5.png" class="first last" src="../_images/image5.png" />
+</td>
+<td>Number 5.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id36">
+<h2><a class="toc-backref" href="#id72">1.11. 置換機能による共通化・省力化</a><a class="headerlink" href="#id36" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>インラインの置換:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="o">|</span><span class="n">ssl</span><span class="o">|</span>
+<span class="o">*</span> <span class="o">|</span><span class="n">tls</span><span class="o">|</span>
+<span class="o">*</span> <span class="o">|</span><span class="n">rest</span><span class="o">|</span>
+<span class="o">*</span> <span class="o">|</span><span class="n">http</span><span class="o">|</span>
+<span class="o">*</span> <span class="o">|</span><span class="n">https</span><span class="o">|</span>
+<span class="o">*</span> <span class="o">|</span><span class="n">chkconfig</span><span class="o">|</span>
+<span class="o">*</span> <span class="o">|</span><span class="n">systemctl</span><span class="o">|</span>
+<span class="o">*</span> <span class="o">|</span><span class="n">hosts</span><span class="o">|</span>
+<span class="o">*</span> <span class="o">|</span><span class="n">crontab</span><span class="o">|</span>
+<span class="o">*</span> <span class="o">|</span><span class="n">passwd</span><span class="o">|</span>
+<span class="o">*</span> <span class="o">|</span><span class="n">kbd_ctrl</span><span class="o">-</span><span class="n">c</span><span class="o">|</span>
+<span class="o">*</span> <span class="o">|</span><span class="n">kbd_ctrl</span><span class="o">-</span><span class="n">v</span><span class="o">|</span>
+<span class="o">*</span> <span class="o">|</span><span class="n">kbd_esc</span><span class="o">|</span>
+<span class="o">*</span> <span class="o">|</span><span class="n">kbd_meta</span><span class="o">|</span>
+<span class="o">*</span> <span class="o">|</span><span class="n">man_ls</span><span class="o">|</span>
+</pre></div>
+</div>
+<p>→</p>
+<ul class="simple">
+<li><abbr title="Secure Sockets Layer">SSL</abbr></li>
+<li><abbr title="Transport Layer Security">TLS</abbr></li>
+<li>reStructuredText</li>
+<li><abbr title="Hypertext Transfer Protocol">HTTP</abbr></li>
+<li><abbr title="Hypertext Transfer Protocol Secure">HTTPS</abbr></li>
+<li><strong class="command">/usr/sbin/chkconfig</strong></li>
+<li><strong class="command">/usr/bin/systemctl</strong></li>
+<li><code class="file docutils literal"><span class="pre">/etc/hosts</span></code></li>
+<li><code class="file docutils literal"><span class="pre">/etc/crontab</span></code></li>
+<li><code class="file docutils literal"><span class="pre">/etc/passwd</span></code></li>
+<li><code class="kbd docutils literal"><span class="pre">Ctrl-C</span></code></li>
+<li><code class="kbd docutils literal"><span class="pre">Ctrl-V</span></code></li>
+<li><code class="kbd docutils literal"><span class="pre">ESC</span></code></li>
+<li><code class="kbd docutils literal"><span class="pre">Meta</span></code></li>
+<li><em class="manpage">ls(1)</em></li>
+<li><a class="reference external" href="https://www.ruby-lang.org/"><img alt="image one" src="../_images/image1.png" /></a></li>
+<li><a class="reference external" href="https://www.python.org/"><img alt="image two" src="../_images/image2.png" /></a></li>
+<li><a class="reference external" href="http://php.net/"><img alt="image three" src="../_images/image3.png" /></a></li>
+</ul>
+<hr class="docutils" />
+<table border="1" class="docutils" id="id45">
+<caption><span class="caption-number">表番号 - 1.11.1 </span><span class="caption-text">embedded replaces</span><a class="headerlink" href="#id45" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">|release|</span></code></td>
+<td>0.1</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">|version|</span></code></td>
+<td>0.1</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">|today|</span></code></td>
+<td>2016-09-04 20:34:33</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<table border="1" class="docutils" id="id46">
+<caption><span class="caption-number">表番号 - 1.11.2 </span><span class="caption-text">images in table</span><a class="headerlink" href="#id46" title="このテーブルへのパーマリンク">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>image one</td>
+<td><a class="reference external" href="https://www.ruby-lang.org/"><img alt="image one" src="../_images/image1.png" /></a></td>
+</tr>
+<tr class="row-even"><td>image two</td>
+<td><a class="reference external" href="https://www.python.org/"><img alt="image two" src="../_images/image2.png" /></a></td>
+</tr>
+<tr class="row-odd"><td>image three</td>
+<td><a class="reference external" href="http://php.net/"><img alt="image three" src="../_images/image3.png" /></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id37">
+<h2><a class="toc-backref" href="#id73">1.12. フィールド表記</a><a class="headerlink" href="#id37" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Date:</th><td class="field-body"><p class="first">2016-09-04 20:34:33</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Version:</th><td class="field-body"><p class="first">0.1</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Authors:</th><td class="field-body"><ul class="first simple">
+<li>author1</li>
+<li>author2</li>
+<li>author3</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">インデント入り:</th><td class="field-body"><p class="first last">この文章は、途中で
+インデントされてます。
+どう表示されるかな？</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="todos">
+<h2><a class="toc-backref" href="#id74">1.13. TODOs</a><a class="headerlink" href="#todos" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">課題</p>
+<p class="last">TODO文書その1</p>
+</div>
+<div class="admonition-todo admonition" id="index-1">
+<p class="first admonition-title">課題</p>
+<p>TODO文書その2
+TODO文書その2</p>
+<p class="last">TODO文書その2
+TODO文書その2</p>
+</div>
+</div>
+<div class="section" id="id38">
+<h2><a class="toc-backref" href="#id75">1.14. 引用書籍一覧(同一ページ内)</a><a class="headerlink" href="#id38" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<table class="docutils citation" frame="void" id="cit01" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id5">[CIT01]</a></td><td>Book1 Title.
+foo
+bar</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="cit02" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id6">[CIT02]</a></td><td>Book2 Title.
+foo
+bar</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="cit03" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id7">[CIT03]</a></td><td>Book3 Title.
+foo
+bar</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="include">
+<span id="label-citation-included"></span><h1><a class="toc-backref" href="#id76">2. 引用書籍一覧(ページinclude)</a><a class="headerlink" href="#include" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<table class="docutils citation" frame="void" id="cit07" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id11">[CIT07]</a></td><td>Book7 Title.
+foo
+bar</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="cit08" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id12">[CIT08]</a></td><td>Book8 Title.
+foo
+bar</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="cit09" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id13">[CIT09]</a></td><td>Book9 Title.
+foo
+bar</td></tr>
+</tbody>
+</table>
+<p class="rubric">Footnotes</p>
+<table class="docutils footnote" frame="void" id="id39" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id15">[1]</a></td><td>脚注1</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id40" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id16">[2]</a></td><td>脚注2</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id41" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[3]</td><td>脚注3</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id42" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[4]</td><td>脚注4</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id43" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id18">[5]</a></td><td>脚注5</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="footnote-label1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id19">[6]</a></td><td>脚注文書です。
+脚注文書です。
+脚注文書です。
+脚注文書です。
+脚注文書です。</td></tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ex-role-dirs.html" class="btn btn-neutral float-right" title="3. ロールやディレクティブの練習" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral" title="Sphinxとrestの練習" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, msaksamoto-sf.
+      最終更新: 2016-09-04 20:34:33
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/mycustom.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+      <script type="text/javascript" src="../_static/mytheme.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+<!-- my custom "_template/layout.html" footer beacon -->
+
+<div id="mytheme_common">
+  <p>my theme, hello, WORLD - good evening</p>
+</div>
+ 
+
+
+
+</body>
+</html>

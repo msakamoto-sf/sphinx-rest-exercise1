@@ -1,0 +1,12 @@
+{% extends "!layout.html" %}
+
+{%- block extrahead %}
+{{ super() }}
+<!-- my custom "_template/layout.html" extraheader beacon -->
+{%- endblock%}
+
+{% block footer %}
+<!-- my custom "_template/layout.html" footer beacon -->
+{{ super() }}
+{% endblock %}
+
