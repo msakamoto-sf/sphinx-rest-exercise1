@@ -1,9 +1,0 @@
-/* load sphinx_rtd_theme css */
-@import url('css/theme.css');
-
-p.mytheme {
-  border: 1px solid black;
-  margin: 30px;
-  padding: 30px;
-}
-

@@ -1,2 +1,0 @@
-Disallow: /cgi-bin/
-Disallow: /test/
