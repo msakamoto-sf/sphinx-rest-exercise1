@@ -32,11 +32,13 @@ $ echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
 $ source ~/.bashrc
 ```
 
-### 3. Sphinx用のvirtualenv作成
+### 3. Sphinx用のvirtualenv作成とインストール
 
 ```
 $ pyenv virtualenv 2.7.12 sphinxt1
+
 (cd to test dir)
+
 $ pyenv local 2.7.12/envs/sphinxt1
 $ pip install Sphinx
 $ pyenv rehash
@@ -46,6 +48,12 @@ $ pyenv rehash
 
 ```
 $ pip install sphinx_rtd_theme
+```
+
+### 5. sphinxドキュメントの作成（初回のみ）
+
+```
+$ sphinx-quickstart
 ```
 
 参考：検証時点(2016-09-03)でインストールされたパッケージとバージョン
@@ -67,12 +75,6 @@ snowballstemmer (1.2.1)
 Sphinx (1.4.6)
 sphinx-rtd-theme (0.1.9)
 wheel (0.29.0)
-```
-
-### 5. sphinxドキュメントの作成（初回のみ）
-
-```
-$ sphinx-quickstart
 ```
 
 ## HTMLのビルド
