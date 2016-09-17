@@ -1,0 +1,511 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>6. 索引(index)の例 &mdash; SphinxとreSTの練習です。</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/main.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/mycustom.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/mytheme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="SphinxとreSTの練習です。" href="../index.html"/>
+        <link rel="prev" title="5. 引用書籍一覧(ページ分割)" href="ex-citation1.html"/>
+
+ 
+<!-- my theme custom extrahead beacon -->
+<!-- my custom "_template/layout.html" extraheader beacon -->
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> sphinx-test1
+          
+
+          
+            
+            <img src="../_static/image1.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">全体目次</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Sphinxとrestの練習</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ex-typical1.html">1. restructured text の練習</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ex-typical1.html#include">2. 引用書籍一覧(ページinclude)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ex-role-dirs.html">3. ロールやディレクティブの練習</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ex-css-class-theme.html">4. HTMLのカスタマイズ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ex-citation1.html">5. 引用書籍一覧(ページ分割)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. 索引(index)の例</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#single-ent0">6.1. single-ent0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#single-ent1-2-3-pair-pent1-2-triple-1-2-3">6.2. single-ent1,2,3 pair-pent1-2, triple-1,2,3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#single-ent4-5-6-pair-pent1-2-triple-1-2-3">6.3. single-ent4,5,6 pair-pent1-2, triple-1,2,3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#single-ent1-3-5-pair-pent1-2-triple-4-5-6">6.4. single-ent1,3,5 pair-pent1-2, triple-4,5,6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#single-ent2-4-6-pair-pent1-2-triple-4-5-6">6.5. single-ent2,4,6 pair-pent1-2, triple-4,5,6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#single-ent7-8-9">6.6. single-ent7, 8, 9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#single-ent7-8-9-2">6.7. single-ent7, 8, 9 (2)</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">全体目次2</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ex-typical1.html">1. restructured text の練習</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ex-typical1.html#include">2. 引用書籍一覧(ページinclude)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ex-role-dirs.html">3. ロールやディレクティブの練習</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">sphinx-test1</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>6. 索引(index)の例</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/re-st_syntax/ex-indice.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="index">
+<span id="label-indice-samples"></span><h1>6. 索引(index)の例<a class="headerlink" href="#index" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<ul class="simple">
+<li><a class="reference external" href="http://sphinx-users.jp/reverse-dict/writing/indexing.html">http://sphinx-users.jp/reverse-dict/writing/indexing.html</a></li>
+<li><a class="reference external" href="http://www.sphinx-doc.org/ja/stable/markup/misc.html">http://www.sphinx-doc.org/ja/stable/markup/misc.html</a></li>
+</ul>
+<p>ex:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>.. index::
+   single: ent1; ent2; ent3;
+   pair: pent1; pent2
+   triple: tent1; tent2; tent3;
+
+   hello, :index:`inline index` here.
+   another :index:`index pair&lt;pent1; pent2&gt;` here.
+</pre></div>
+</div>
+<p id="index-0">あああああ</p>
+<div class="section" id="single-ent0">
+<h2>6.1. single-ent0<a class="headerlink" href="#single-ent0" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いい <span class="target" id="index-1"></span>日本語索引１ いいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p id="index-2">あああああ</p>
+</div>
+<div class="section" id="single-ent1-2-3-pair-pent1-2-triple-1-2-3">
+<h2>6.2. single-ent1,2,3 pair-pent1-2, triple-1,2,3<a class="headerlink" href="#single-ent1-2-3-pair-pent1-2-triple-1-2-3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお
+いい <span class="target" id="index-3"></span>日本語索引１ いいい</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p id="index-4">あああああ</p>
+</div>
+<div class="section" id="single-ent4-5-6-pair-pent1-2-triple-1-2-3">
+<h2>6.3. single-ent4,5,6 pair-pent1-2, triple-1,2,3<a class="headerlink" href="#single-ent4-5-6-pair-pent1-2-triple-1-2-3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p id="index-5">あああああ</p>
+</div>
+<div class="section" id="single-ent1-3-5-pair-pent1-2-triple-4-5-6">
+<h2>6.4. single-ent1,3,5 pair-pent1-2, triple-4,5,6<a class="headerlink" href="#single-ent1-3-5-pair-pent1-2-triple-4-5-6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ
+いい <span class="target" id="index-6"></span>日本語索引１ いいい</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p id="index-7">あああああ</p>
+</div>
+<div class="section" id="single-ent2-4-6-pair-pent1-2-triple-4-5-6">
+<h2>6.5. single-ent2,4,6 pair-pent1-2, triple-4,5,6<a class="headerlink" href="#single-ent2-4-6-pair-pent1-2-triple-4-5-6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p id="index-8">あああああ</p>
+</div>
+<div class="section" id="single-ent7-8-9">
+<h2>6.6. single-ent7, 8, 9<a class="headerlink" href="#single-ent7-8-9" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いい <span class="target" id="index-9"></span>日本語索引２ いいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p id="index-10">あああああ</p>
+</div>
+<div class="section" id="single-ent7-8-9-2">
+<h2>6.7. single-ent7, 8, 9 (2)<a class="headerlink" href="#single-ent7-8-9-2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いいいいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+<p>あああああ</p>
+<p>いい <span class="target" id="index-11"></span>日本語索引２ いいい</p>
+<p>うううううう</p>
+<p>ええええええ</p>
+<p>おおおおおおおお</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="ex-citation1.html" class="btn btn-neutral" title="5. 引用書籍一覧(ページ分割)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, msaksamoto-sf.
+      最終更新: 2016-09-17 21:28:17
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/mycustom.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+      <script type="text/javascript" src="../_static/mytheme.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+<!-- my custom "_template/layout.html" footer beacon -->
+
+<div id="mytheme_common">
+  <p>my theme, hello, WORLD - good evening</p>
+</div>
+ 
+
+
+
+</body>
+</html>

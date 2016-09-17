@@ -24,6 +24,7 @@ Sphinxとrestの練習
   re-st_syntax/ex-role-dirs.rst
   re-st_syntax/ex-css-class-theme.rst
   re-st_syntax/ex-citation1.rst
+  re-st_syntax/ex-indice.rst
 
 toctreeをもう一つ入れてみる
 =============================
